@@ -8,7 +8,7 @@
 """
 文件存储
 """
-# 1、TXT文本存储
+# 1、TXT文本存储1
 from pyquery import PyQuery as pq
 import requests
 
@@ -33,4 +33,3 @@ for item in items:
         sequence = (question, author, answer)
         f.write(str.join(sequence))
         f.write('\n' + '=' * 50 + '\n')
-
