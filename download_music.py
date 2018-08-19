@@ -124,7 +124,7 @@ def get_list(detail_html, singer):
 
 
 def main():
-    singer = input('请输入您想要下载的歌手：')
+    singer = input('请输入歌手姓名：')
     name = get_name(singer)
     detail_html = get_html(name, singer)
     get_list(detail_html, singer)
