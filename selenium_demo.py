@@ -9,6 +9,7 @@ selenium的使用
 """
 # 1. 基本使用
 from selenium import webdriver
+from bs4 import BeautifulSoup
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
@@ -18,6 +19,9 @@ import time
 browser = webdriver.Chrome()
 try:
     browser.get('https://www.baidu.com')
+    html=browser.page_source
+    soup=BeautifulSoup(html,"lxml")
+    print soup.prettify()
     input = browser.find_element_by_id('kw')
     input.send_keys('python')
     input.send_keys(Keys.ENTER)
